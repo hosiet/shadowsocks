@@ -2,18 +2,46 @@ Source: shadowsocks
 Section: python
 Priority: extra
 Maintainer: Shell.Xu <shell909090@gmail.com>
-Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~), python-setuptools
-Standards-Version: 3.9.5
-Homepage: https://github.com/clowwindy/shadowsocks
-Vcs-Git: git://github.com/shell909090/shadowsocks.git
-Vcs-Browser: http://github.com/shell909090/shadowsocks
+Build-Depends:
+ debhelper (>= 9),
+ dh-python,
+ python-all (>= 2.6.6-3~),
+ python-setuptools,
+ python3-all (>= 3.2),
+ python3-setuptools,
+Standards-Version: 3.9.8
+X-Python-Vesion: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://shadowsocks.org
+Vcs-Git: https://github.com/shadowsocks/shadowsocks.git
+Vcs-Browser: https://github.com/shadowsocks/shadowsocks
+
+Package: python-shadowsocks
+Architecture: all
+Depends:
+ python-pkg-resources,
+ ${misc:Depends},
+ ${python:Depends},
+Description: Fast tunnel proxy that helps you bypass firewalls
+ A secure socks5 proxy, designed to protect your Internet traffic.
+ This is the Python2 implementation of shadowsocks protocol. You
+ may incorporate this tool with other implementations to build
+ your own tunnel proxy.
+ .
+ This package contains Python2 version only.
 
 Package: shadowsocks
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources, python-m2crypto
+Section: net
+Depends:
+ python3-pkg-resources,
+ ${misc:Depends},
+ ${python3:Depends},
 Description: Fast tunnel proxy that helps you bypass firewalls
  A secure socks5 proxy, designed to protect your Internet traffic.
+ This is the Python3 implementation of shadowsocks protocol. You
+ may incorporate this tool with other implementations to build
+ your own tunnel proxy.
  .
- This package contain local and server part of shadowsocks, a fast,
- powerful tunnel proxy to bypass firewalls.
+ This package contains local and server tool of shadowsocks should
+ be used with Python3.

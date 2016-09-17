@@ -1,3 +1,13 @@
+shadowsocks (2.9.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release. (Closes: 824640)
+  * Update man pages. (Closes: 810688)
+  * Switch to new license (Expat -> Apache-2.0 by upstream).
+  * Drop unneeded python-m2crypto dependency.
+  * Bump Standard version to 3.9.8.
+
+ -- Boyuan Yang <073plan@gmail.com>  Sat, 17 Sep 2016 15:25:41 +0800
+
 shadowsocks (2.1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #758900)
