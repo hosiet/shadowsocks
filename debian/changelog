@@ -1,10 +1,16 @@
-shadowsocks (2.9.0-1) UNRELEASED; urgency=medium
+shadowsocks (2.9.0-1) unstable; urgency=medium
 
-  * New upstream release. (Closes: 824640)
-  * Update man pages. (Closes: 810688)
+  * New upstream release. (Closes: #824640)
+    - Add OTA support.
+    - Fix DNS cache cleanup.
+    - Various fixes.
+  * Don't mention nonexistent info pages in manpage. (Closes: #810688)
   * Switch to new license (Expat -> Apache-2.0 by upstream).
   * Drop unneeded python-m2crypto dependency.
   * Bump Standard version to 3.9.8.
+  * Add patches from upstream trunk:
+    - fix version number.
+    - fix OTA functions.
 
  -- Boyuan Yang <073plan@gmail.com>  Sat, 17 Sep 2016 15:25:41 +0800
 
